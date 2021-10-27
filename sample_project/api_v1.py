@@ -3,7 +3,7 @@ from flask_restx import Api
 
 from sample_project.user import ns as ns_user
 from sample_project.person import ns as ns_person
-
+from sample_project.predict import ns as ns_predict
 
 blueprint = Blueprint('api_1_0', __name__)
 
@@ -16,3 +16,4 @@ api = Api(
 api.namespaces.clear()
 api.add_namespace(ns_user)
 api.add_namespace(ns_person)
+api.add_namespace(ns_predict)
